@@ -10,18 +10,19 @@ Using Transparency
 
 Env settings for tray and cpu
 
-External/modified modules
+Custom/modified modules
+
 arch-updates
-temp-cpu modified to use env HWMON
-temp-gpu internal plus modified for nvidia
+temp-cpu modified to use env HWMON_PATH in launch.sh
+temp-gpu internal (disabled), plus modified for nvidia
 uptime
-wireguard
-powermenu (2)
-caps
-num
+wireguard 
+powermenu (2) EOS i3 (disabled), modified from unknown author
+caps cns script from EOS bswpm
+num cns script from EOS bswpm
 term
 thunar
 edge
 firefox
 steam
-i3
+Additional reference in scripts
