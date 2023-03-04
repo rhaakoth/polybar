@@ -14,10 +14,10 @@ Custom/modified modules
 
 arch-updates
 temp-cpu -modified to use env HWMON_PATH in launch.sh
-temp-gpu -internal (disabled), plus modified for nvidia
+temp-gpu -(2) internal (commented), modified for nvidia
 uptime
 wireguard 
-powermenu -(2) EOS i3 (disabled), modified from unknown author
+powermenu -(2) EOS i3 (commented), modified from unknown author
 caps cns -script from EOS bswpm
 num cns -script from EOS bswpm
 term
