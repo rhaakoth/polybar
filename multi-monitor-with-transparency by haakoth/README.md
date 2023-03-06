@@ -12,18 +12,18 @@ A launch.sh.simple is included for single monitor only.
 
 Using Transparency
 
-This took me a minute, so thought I would mention for those that are not aware. i3 uses transparency at the end of color hex codes, while polybar uses it at the beginning.
+To save someone time, if they might not know, i3 sets transparency at the end of color hex codes, while polybar sets it at the beginning. 
 i3      - #b48eadcc
 polybar -  #ccb48ead
 
-The original color is defined, so just replace tbg with bg for example on the background, to remove transparency. (tgrey and torange are also used)
+There are three transparent colors, bg/tbg, grey/tgrey, and orange/torange. Replace tbg with bg, to remove transparency.
 
 
 Env settings for tray and cpu
 
-My hardware occasionally uses hwmon7, and after a cold boot will use hwmon8 the next time for the cpu path. The launcher.sh checks for the path and sets an env variable to be used by the module. The original hardcoded module is included and may be used if this is not the case in your situation.
+My hardware occasionally uses hwmon7, then after a cold boot will use hwmon8 the next time for the cpu path (and vice versa). The launcher.sh checks for the path and sets an env variable to be used by the module. If you use the simple launch, this logic will need to be uncommented. The original hardcoded module is included and may be used if this is not the case in your situation.
 
-The tray env is set/passed from launcher.sh in on one of the two lines for primary display
+The tray env is set/passed from launcher.sh in one of the two lines for primary display
 
 
 Custom/modified modules
