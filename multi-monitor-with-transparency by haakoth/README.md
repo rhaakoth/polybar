@@ -5,7 +5,7 @@
   
 Using multi monitor/single config
 
-The launcher.sh will handle a single monitor, or three monitors. This was designed for a specific solution to a laptop with 2 external monitors, and matches primary, HDMI-0 and eDP-1-1. You will need to edit for your hardware/use.
+The launcher.sh will handle a single monitor, or three monitors. This was designed for a laptop with 2 external monitors, and matches primary, HDMI-0 and eDP-1-1. You will need to edit for your hardware/use.
 
 A launch.sh.simple is included for single monitor only.
 
@@ -26,17 +26,27 @@ My hardware occasionally uses hwmon7, then after a cold boot will use hwmon8 the
 The tray env is set/passed from launcher.sh in one of the two lines for primary display
 
 
-Custom/modified modules
+Custom/modified modules (acknowledgement when known are in modules.ini of top of script)
+
+The following 3, both modules have the same name, and one must at a minimum must be commented
+temp-cpu 
+  - internal standard harcoded path (commented)
+  - modified to use env HWMON_PATH provided by launch.sh, launch.sh will need to be edited for appropriate hwmon
+temp-gpu 
+  - internal (commented)
+  - modified for nvidia-smi
+powermenu 
+  - EOS i3 (commented)
+  - Expand left, reboot and shutdown only options (unknown author)
+
+wireguard 
+  - Simple connect/disconnect icon using nmcli cmd, and the grep can easily be modified for other vpn type connections
+
+cns caps/num 
+  - script from EOS bswpm for Cap and Numlock indicator
 
 arch-updates
-temp-cpu -modified to use env HWMON_PATH in launch.sh
-temp-gpu -(2) internal (commented), modified for nvidia
 uptime
-wireguard 
-powermenu -(2) EOS i3 (commented), modified from unknown author
-cns caps/num - script from EOS bswpm
-Launchers term,thunar, firfox, edge, steam
-
-Additional reference in scripts
+Launchers term, thunar, firfox, edge, steam
 
 Many thanks to bitterhalt for his tokyo-night polybar implementation, which this was derived from.
